@@ -1,0 +1,19 @@
+<ion-view>
+    <ion-nav-title>Home</ion-nav-title>
+    <ion-content style="background-color: #eee;">
+        <ion-refresher pulling-text="Pull to refresh" on-refresh="homeCtrl.doRefresh()"></ion-refresher>
+        <div class="list card" ng-repeat="post in homeCtrl.posts" ui-sref="root.post(::{ id: post.ID })">
+            <div class="item item-avatar">
+                <img ng-src="{{::post.author.avatar}}">
+                <h2>{{::post.author.name}}</h2>
+                <p>{{::post.date | date:'medium'}}</p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{::post.featured_image.attachment_meta.sizes.medium.url}}">
+                <h2>{{::post.title}}</h2>
+                <p ng-bind-html="::post.excerpt"></p>
+            </div>
+        </div>
+        <ion-infinite-scroll immediate-check="true" ng-if="homeCtrl.posts && !homeCtrl.isPaginationOver" on-infinite="homeCtrl.loadMore()"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

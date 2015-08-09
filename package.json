@@ -1,0 +1,50 @@
+{
+  "name": "ios-android-wordpress-ionic-webpack-ES6",
+  "version": "1.0.0",
+  "description": "Repo created for the TutsPlus article: Creating iOS/Android mobile applications for WordPress using Ionic SDK, Webpack, ES6 and WP-API",
+  "main": "lib/index.js",
+  "scripts": {
+    "installCordova": "sh ./install_cordova.sh",
+    "devserver": "webpack-dev-server --colors --json --progress",
+    "dumpdev": "rm -rf www/* && webpack",
+    "dumpprod": "rm -rf www/* && webpack --release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shprink/ios-android-wordpress-ionic-webpack-ES6.git"
+  },
+  "author": "shprink <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "cordova": "^5.0.0",
+    "css-loader": "^0.9.1",
+    "deep-extend": "^0.4.0",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.6.0",
+    "file-loader": "^0.8.1",
+    "html-loader": "^0.2.3",
+    "html-webpack-plugin": "^1.5.0",
+    "json-loader": "^0.5.1",
+    "ng-annotate-loader": "0.0.4",
+    "path": "^0.4.9",
+    "sass-loader": "^1.0.0",
+    "style-loader": "^0.8.3",
+    "util": "^0.10.3",
+    "webpack": "~1.10.0",
+    "webpack-dev-server": "~1.10.0"
+  },
+  "dependencies": {
+    "angular": "~1.3.0",
+    "angular-animate": "~1.3.0",
+    "angular-aria": "~1.3.0",
+    "angular-sanitize": "~1.3.0",
+    "angular-ui-router": "^0.2.13",
+    "ionic-sdk": "^1.0.0",
+    "lodash": "^3.9.3",
+    "ng-cordova": "^0.1.17-alpha",
+    "wp-api-angularjs": "^1.0.0"
+  }
+}

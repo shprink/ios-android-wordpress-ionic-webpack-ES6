@@ -22,6 +22,16 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
+.idea
+engine/
+node_modules/
+platforms/
+plugins/
+resources/
+bower_components/
+*.keystore
+release.sh
+config.scss
+about.md
+iOS
+config/config.json
