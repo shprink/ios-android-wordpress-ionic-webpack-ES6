@@ -18,9 +18,6 @@ module.exports = {
             test: /[\/]lodash\.js$/,
             loader: 'expose?_'
         }, {
-            test: /[\/]ionic\.js$/,
-            loader: 'exports?ionic' // For non commonJs
-        }, {
             test: /\.html$/,
             loader: 'html'
         }, {
@@ -34,7 +31,7 @@ module.exports = {
             loader: "style!css"
         }, {
             test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /(node_modules)/,
             loader: "ng-annotate?add=true!babel"
         }, {
             test: /\.scss$/,
