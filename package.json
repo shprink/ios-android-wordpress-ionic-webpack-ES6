@@ -7,7 +7,13 @@
     "installCordova": "sh ./install_cordova.sh",
     "devserver": "webpack-dev-server --colors --json --progress",
     "dumpdev": "rm -rf www/* && webpack",
-    "dumpprod": "rm -rf www/* && webpack --release"
+    "dumpprod": "rm -rf www/* && webpack --release",
+    "runAndroid": "npm run dumpdev && cordova run android",
+    "runIosEmulator": "npm run dumpdev && cordova run ios",
+    "runIosDevice": "npm run dumpdev && cordova run ios --device",
+    "platformAddAndroid": "cordova platform add android",
+    "platformAddIOS": "cordova platform add ios",
+    "pluginAddAll": "cordova plugin add cordova-plugin-whitelist@1.0.0"
   },
   "repository": {
     "type": "git",

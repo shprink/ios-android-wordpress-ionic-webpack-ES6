@@ -6,4 +6,22 @@ Repo created for the TutsPlus article: Creating iOS/Android mobile applications 
 ```
 cp config/default.config.json config/config.json
 npm install
+
+# Cordova
+cp config.dist.xml config.xml
+npm run installCordova
+```
+
+## Run
+
+```
+# Web
+npm run devserver
+
+# Android
+npm run runAndroid
+
+# iOS
+npm run runIosEmulator
+npm run runIosDevice
 ```
