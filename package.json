@@ -7,7 +7,7 @@
     "installCordova": "sh ./install_cordova.sh",
     "devserver": "webpack-dev-server --colors --json --progress",
     "dumpdev": "rm -rf www/* && webpack",
-    "dumpprod": "rm -rf www/* && webpack --release",
+    "dumpprod": "rm -rf www/* && webpack --release --config webpack.config.prod.js",
     "runAndroid": "npm run dumpdev && cordova run android",
     "runIosEmulator": "npm run dumpdev && cordova run ios",
     "runIosDevice": "npm run dumpdev && cordova run ios --device",

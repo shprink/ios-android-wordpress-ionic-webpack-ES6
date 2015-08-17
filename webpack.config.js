@@ -2,6 +2,7 @@ var path = require('path'),
     libPath = path.join(__dirname, 'lib'),
     wwwPath = path.join(__dirname, 'www'),
     pkg = require('./package.json'),
+    webpack = require("webpack"),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
