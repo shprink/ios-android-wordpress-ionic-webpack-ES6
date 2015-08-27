@@ -4,7 +4,7 @@
 
 Creating hybrid applications with technologies such as Ionic SDK and Cordova has been really popular lately. This tutorial shows you how you can leverage those technologies and the WordPress API (WP-API) to build a tailored application for your website needs.
 
-Tuts+ tutorial: [Creating iOS & Android mobile applications for WordPress using Ionic SDK, Webpack, ES6 and WP-API](http://code.tutsplus.com/tutorials/creating-ios-android-mobile-applications-for-wordpress-using-ionic-sdk-webpack-es6-and-wp-api--cms-24170)
+Tuts+ tutorial: [Creating iOS & Android mobile applications for WordPress using Ionic SDK, Webpack, ES6 and WP-API](http://code.tutsplus.com/tutorials/creating-ios-android-mobile-applications-for-wordpress-using-ionic-framework-webpack-es6-and-wp-api--cms-24170)
 
 ### Install
 
