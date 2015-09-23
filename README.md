@@ -1,10 +1,12 @@
-### Tuts+ Tutorial: Creating iOS & Android mobile applications for WordPress using Ionic SDK, Webpack, ES6 and WP-API
+### Tuts+ Tutorial: Create a Mobile Application Using WordPress, Ionic, and AngularJS
 
 #### Instructor: Julien Renaux
 
-Creating hybrid applications with technologies such as Ionic SDK and Cordova has been really popular lately. This tutorial shows you how you can leverage those technologies and the WordPress API (WP-API) to build a tailored application for your website needs.
+Creating hybrid, mobile applications with technologies, such as Ionic Framework and Cordova, has become increasingly popular. This tutorial shows you how you can leverage those technologies to build a hybrid, mobile application for your WordPress website.
 
-Tuts+ tutorial: [Creating iOS & Android mobile applications for WordPress using Ionic SDK, Webpack, ES6 and WP-API](http://code.tutsplus.com/tutorials/creating-ios-android-mobile-applications-for-wordpress-using-ionic-framework-webpack-es6-and-wp-api--cms-24170)
+Tuts+ tutorial: [Create a Mobile Application Using WordPress, Ionic, and AngularJS](http://code.tutsplus.com/tutorials/create-a-mobile-application-using-wordpress-ionic-and-angularjs--cms-24170)
+
+**Read this tutorial on [Tuts+](https://code.tutsplus.com)**
 
 ### Install
 
