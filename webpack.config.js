@@ -13,12 +13,6 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /[\/]angular\.js$/,
-            loader: 'expose?angular!exports?window.angular'
-        }, {
-            test: /[\/]lodash\.js$/,
-            loader: 'expose?_'
-        }, {
             test: /\.html$/,
             loader: 'html'
         }, {
