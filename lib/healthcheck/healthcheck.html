@@ -1,12 +1,17 @@
 <ion-view>
     <ion-nav-title>Healthcheck</ion-nav-title>
     <ion-content style="background-color: #eee;">
-        <h2>{{hcCtrl.foo}}</h2>
+        
         <form name="hcForm" novalidate="" ng-submit="submitHealthcheck(hcForm)">
-        	<ion-list>
-        	  <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
-        	  <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
-        	</ion-list>
+        	<section ng-repeat="section in hcCtrl.questions.sections">
+        		<h3>{{section.description}}</h3>
+
+        		<div ng-repeat="question in section.questions">
+        			<h5>{{question.question}}</h5>
+        			
+        		</div>
+        	</section>
         </form>
+
     </ion-content>
 </ion-view>
