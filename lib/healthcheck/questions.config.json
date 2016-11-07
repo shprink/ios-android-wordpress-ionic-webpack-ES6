@@ -2,16 +2,23 @@
 	"name": "Healthcheck",
 	"sections": [
 		{
+			"id": "s1",
 			"name": "Feelings",
 			"description": "Rate how much you feel these things",
-			"questions": [
+			"elements": [
 				{
-					"question": "Sad",
-					"responseType": "AMOUNT_SCALE"
+					"id": "s1q1",
+					"question": {
+						"text": "Sad",
+						"type": "AMOUNT_SCALE"
+					}
 				},
 				{
-					"question": "Worried",
-					"responseType": "AMOUNT_SCALE"
+					"id": "s1q2",
+					"question": {
+						"text": "Worried",
+						"type": "AMOUNT_SCALE"
+					}
 				}
 			]
 		}
