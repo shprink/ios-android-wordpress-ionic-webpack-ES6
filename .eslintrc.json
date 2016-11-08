@@ -10,7 +10,7 @@
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
@@ -24,5 +24,8 @@
             "error",
             "never"
         ]
+    },
+    "globals": {
+        "angular": true
     }
 }

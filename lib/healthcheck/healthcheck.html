@@ -13,17 +13,17 @@
 
         			<div ng-if="element.question.type === 'AMOUNT_SCALE'">
         				<ion-list>
-        				  <ion-radio ng-model="hcCtrl.responses[element.id]" ng-value="0">None</ion-radio>
-        				  <ion-radio ng-model="hcCtrl.responses[element.id]" ng-value="1">Low</ion-radio>
-        				  <ion-radio ng-model="hcCtrl.responses[element.id]" ng-value="2">Medium</ion-radio>
-        				  <ion-radio ng-model="hcCtrl.responses[element.id]" ng-value="3">High</ion-radio>
+        				  <ion-radio name="{{element.question.text}}" ng-model="hcCtrl.responses[element.id]" ng-value="0">None</ion-radio>
+        				  <ion-radio name="{{element.question.text}}" ng-model="hcCtrl.responses[element.id]" ng-value="1">Low</ion-radio>
+        				  <ion-radio name="{{element.question.text}}" ng-model="hcCtrl.responses[element.id]" ng-value="2">Medium</ion-radio>
+        				  <ion-radio name="{{element.question.text}}" ng-model="hcCtrl.responses[element.id]" ng-value="3">High</ion-radio>
         				</ion-list>
         			</div>
 
         		</div>
         	</section>
-        	<pre>{{hcCtrl.responses}}</pre>
-        	<button class="button button-full" type="submit">Submit</button>
+            <pre>{{hcCtrl.responses}}</pre>
+        	<button class="button button-full button-primary" type="submit">Submit</button>
         </form>
 
     </ion-content>
