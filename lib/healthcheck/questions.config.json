@@ -1,0 +1,26 @@
+{
+	"name": "Healthcheck",
+	"sections": [
+		{
+			"id": "s1",
+			"name": "Feelings",
+			"description": "Rate how much you felt these things today",
+			"elements": [
+				{
+					"id": "s1q1",
+					"question": {
+						"text": "Sad",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q2",
+					"question": {
+						"text": "Worried",
+						"type": "AMOUNT_SCALE"
+					}
+				}
+			]
+		}
+	]
+}
