@@ -4,7 +4,7 @@
 		{
 			"id": "s1",
 			"name": "Feelings",
-			"description": "Rate how much you feel these things",
+			"description": "Rate how much you felt these things today",
 			"elements": [
 				{
 					"id": "s1q1",
