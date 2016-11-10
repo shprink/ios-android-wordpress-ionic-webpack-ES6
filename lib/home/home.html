@@ -1,7 +1,8 @@
 <ion-view>
     <ion-nav-title>Home</ion-nav-title>
     <ion-content style="background-color: #eee;">
-        <ion-refresher pulling-text="Pull to refresh" on-refresh="homeCtrl.refresh()"></ion-refresher>
+        <button class="button button-bar" ui-sref="root.healthcheck">healthcheck</button>
+        <!-- <ion-refresher pulling-text="Pull to refresh" on-refresh="homeCtrl.refresh()"></ion-refresher>
         <div class="list card" ng-repeat="post in homeCtrl.posts track by post.ID" ui-sref="root.post(::{ id: post.ID })">
             <div class="item item-avatar">
                 <img ng-src="{{::post.author.avatar}}">
@@ -14,6 +15,6 @@
                 <p ng-bind-html="::post.excerpt"></p>
             </div>
         </div>
-        <ion-infinite-scroll immediate-check="true" ng-if="homeCtrl.posts && !homeCtrl.isPaginationOver" on-infinite="homeCtrl.loadMore()"></ion-infinite-scroll>
+        <ion-infinite-scroll immediate-check="true" ng-if="homeCtrl.posts && !homeCtrl.isPaginationOver" on-infinite="homeCtrl.loadMore()"></ion-infinite-scroll> -->
     </ion-content>
 </ion-view>

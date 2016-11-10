@@ -1,0 +1,28 @@
+<ion-view>
+    <ion-nav-title>Healthcheck</ion-nav-title>
+    <ion-content style="background-color: #eee;">
+        
+        <form name="hcForm" novalidate="" ng-submit="hcCtrl.submitHealthcheck(hcForm)">
+        	<!-- question-group -->
+        	<section ng-repeat="section in hcCtrl.questions.sections">
+        		<!-- question -->
+
+        		<h3>{{section.description}}</h3>
+
+        		<div ng-repeat="element in section.elements">
+        			<h5>{{element.question.text}}</h5>
+
+                    <response-options 
+                        ng-if="element.question.type === 'AMOUNT_SCALE'"
+                        name="element.id"
+                        ng-model="hcCtrl.responses[element.id]" />
+
+        		</div>
+        	</section>
+            <pre>{{hcCtrl.responses}}</pre>
+        	<button class="button button-full button-primary" type="submit">Submit</button>
+            <pre>{{hcCtrl.saved}}</pre>
+        </form>
+
+    </ion-content>
+</ion-view>
