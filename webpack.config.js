@@ -13,6 +13,8 @@ module.exports = {
     },
     module: {
         loaders: [{
+            test: /[\/]angular\.js$/, loader: 'exports?angular' },
+        {
             test: /\.html$/,
             loader: 'html'
         }, {
@@ -37,6 +39,9 @@ module.exports = {
         }]
     },
     resolve: {
+        alias: {
+            angular: __dirname + '/node_modules/ionic-sdk/release/js/ionic.bundle'
+        },
         extensions: ['', '.js', '.json', '.scss', '.html'],
         root: [
             libPath,

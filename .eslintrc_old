@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "strict": 0
+  },
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "jasmine": true
+  },
+  "plugins": [
+  ],
+  "globals": {
+    "__BASE__": true,
+    "__DEBUG__": true,
+    "__DEV__": true,
+  }
+}

@@ -1,7 +1,32 @@
 <ion-view>
     <ion-nav-title>Home</ion-nav-title>
     <ion-content style="background-color: #eee;">
-        <ion-refresher pulling-text="Pull to refresh" on-refresh="homeCtrl.refresh()"></ion-refresher>
+        <div class="row">
+            <div class="col col-center">
+                <button class="button button-block button-assertive" ui-sref="root.healthcheck">Start healthcheck!</button>
+            </div>
+        </div>
+        <div class="list">
+            <a class="item item-icon-left">
+                <i class="icon ion-ios-pulse-strong"></i>
+                Healthchecks
+                <span class="badge badge-assertive">{{homeCtrl.healthcheckEntryCount}}</span>
+            </a>    
+            <a class="item item-icon-left">
+                <i class="icon ion-android-textsms"></i>
+                Gratitudes
+                <span class="badge badge-assertive">{{homeCtrl.gratitudeEntryCount}}</span>
+            </a>    
+            <a class="item item-icon-left">
+                <i class="icon ion-calendar"></i>
+                Last entry
+                <span class="item-note">
+                    {{homeCtrl.healthcheckEntryLastDate | date: 'd MMM, H:mm'}}
+                </span>
+            </a>    
+        </div>
+        
+        <!-- <ion-refresher pulling-text="Pull to refresh" on-refresh="homeCtrl.refresh()"></ion-refresher>
         <div class="list card" ng-repeat="post in homeCtrl.posts track by post.ID" ui-sref="root.post(::{ id: post.ID })">
             <div class="item item-avatar">
                 <img ng-src="{{::post.author.avatar}}">
@@ -14,6 +39,6 @@
                 <p ng-bind-html="::post.excerpt"></p>
             </div>
         </div>
-        <ion-infinite-scroll immediate-check="true" ng-if="homeCtrl.posts && !homeCtrl.isPaginationOver" on-infinite="homeCtrl.loadMore()"></ion-infinite-scroll>
+        <ion-infinite-scroll immediate-check="true" ng-if="homeCtrl.posts && !homeCtrl.isPaginationOver" on-infinite="homeCtrl.loadMore()"></ion-infinite-scroll> -->
     </ion-content>
 </ion-view>
