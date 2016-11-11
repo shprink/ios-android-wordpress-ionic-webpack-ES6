@@ -70,13 +70,15 @@
                             <response-options 
                                 ng-if="element.question.type === 'AMOUNT_SCALE'"
                                 name="element.id"
-                                ng-model="hcCtrl.responses[section.id][element.id]" />
-                                <pre>{{hcCtrl.responses}}</pre>
-                            <!-- <div class="item item-text-wrap">
-                                <p>
-                                    Click the buttons above
-                                </p>
-                            </div> -->
+                                ng-model="hcCtrl.responses[section.id][element.id]"></response-options>
+                            
+                            <label class="item item-input"
+                                ng-show="element.question.type === 'TEXT'">
+                                <textarea placeholder="..."
+                                    rows="6"
+                                    ng-model="hcCtrl.responses[section.id][element.id]"></textarea>
+                            </label>
+
                         </div>
                     </div>
                 </div>
