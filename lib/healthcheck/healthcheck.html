@@ -1,11 +1,11 @@
-<ion-view>
+<!-- <ion-view>
     <ion-nav-title>Healthcheck</ion-nav-title>
     <ion-content style="background-color: #eee;">
         
         <form name="hcForm" novalidate="" ng-submit="hcCtrl.submitHealthcheck(hcForm)">
-        	<!-- question-group -->
+
         	<section ng-repeat="section in hcCtrl.questions.sections">
-        		<!-- question -->
+
 
         		<h3>{{section.description}}</h3>
 
@@ -25,4 +25,162 @@
         </form>
 
     </ion-content>
+</ion-view>
+ -->
+<ion-view>
+    <ion-nav-buttons side="left">
+        <button class="button button-light no-animation" ion-wizard-previous>
+            Back
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-light no-animation" ion-wizard-next>
+            Next
+        </button>
+        <button class="button button-light no-animation" ion-wizard-start="hcCtrl.start()" condition="hcCtrl.startCondition()">
+            Start App
+        </button>
+    </ion-nav-buttons>
+    <ion-slides options="swiperOptions" slider="swiper" ion-wizard>
+    
+        <ion-slide-page 
+            ion-wizard-step>
+            <ion-content class="has-header">
+                <div class="row">
+                    <div class="col col-center">
+                        <div class="card rounded">
+                            <h2 class="positive">{{hcCtrl.questions.sections[0].description}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-slide-page>
+
+        <ion-slide-page 
+            ion-wizard-step
+            next-condition="hcCtrl.responses.hasOwnProperty(element.id)"
+            ng-repeat="element in hcCtrl.questions.sections[0].elements">
+            <ion-content class="has-header">
+                <div class="row">
+                    <div class="col col-center">
+                        <div class="card rounded">
+                            <div class="item">
+                                <h2 class="positive">{{element.question.text}}</h2>
+                            </div>
+                            <response-options 
+                                ng-if="element.question.type === 'AMOUNT_SCALE'"
+                                name="element.id"
+                                ng-model="hcCtrl.responses[element.id]" />
+                                <pre>{{hcCtrl.responses}}</pre>
+                            <!-- <div class="item item-text-wrap">
+                                <p>
+                                    Click the buttons above
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-slide-page>
+       <!--  <ion-slide-page ion-wizard-step next-condition="hcCtrl.step2.name" prev-condition="!hcCtrl.step2.name">
+            <ion-content class="has-header">
+            <div class="row">
+                <div class="col col-center">
+                    <div class="item item-input-inset">
+                        <label class="item item-input-wrapper">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="text" placeholder="Type something" ng-model="hcCtrl.step2.name" autocomplete="off">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-center">
+                    <div class="card rounded" ng-hide="hcCtrl.step2.name">
+                        <div class="item">
+                            <h2 class="positive">The next button has been disabled until the input is filled</h2>
+                        </div>
+                    </div>
+                    <div class="card rounded" ng-show="hcCtrl.step2.name">
+                        <div class="item">
+                            <h2 class="positive">Now you can move on! Click on the next button. The previous button has now been disabled</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-center">
+                    <div class="card rounded">
+                        <div class="item">
+                            <h2 class="positive">This slide is scrollable</h2>
+                        </div>
+                        <div class="item item-text-wrap">
+                            <p>
+                                Click the buttons above
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-center">
+                    <div class="card rounded">
+                        <div class="item">
+                            <h2 class="positive">This slide is scrollable</h2>
+                        </div>
+                        <div class="item item-text-wrap">
+                            <p>
+                                Click the buttons above
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-center">
+                    <div class="card rounded">
+                        <div class="item">
+                            <h2 class="positive">This slide is scrollable</h2>
+                        </div>
+                        <div class="item item-text-wrap">
+                            <p>
+                                Click the buttons above
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-center">
+                    <div class="card rounded">
+                        <div class="item">
+                            <h2 class="positive">This slide is scrollable</h2>
+                        </div>
+                        <div class="item item-text-wrap">
+                            <p>
+                                Click the buttons above
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </ion-content>
+        </ion-slide-page>
+        <ion-slide-page ion-wizard-step class="has-header">
+            <div class="row">
+                <div class="col col-center">
+                    <h3 class="positive">Thanks for running the wizard!</h3>
+                    <p>As a last step please fill in the field below</p>
+                    <div class="item item-input-inset">
+                        <label class="item item-input-wrapper">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="text" placeholder="Type something" ng-model="hcCtrl.step3.something" autocomplete="off">
+                        </label>
+                    </div>
+                    <h3 ng-show="hcCtrl.step3.something">You can now launch the app using the button above!</h3>
+                </div>
+            </div>
+        </ion-slide-page> -->
+    </ion-slides>
+
 </ion-view>
