@@ -2,7 +2,7 @@
 	"name": "Healthcheck",
 	"sections": [
 		{
-			"id": "s1",
+			"id": "FEELINGS",
 			"name": "Feelings",
 			"description": "Rate how much you felt these things today",
 			"elements": [
@@ -17,6 +17,48 @@
 					"id": "s1q2",
 					"question": {
 						"text": "Worried",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q3",
+					"question": {
+						"text": "Anxious",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q4",
+					"question": {
+						"text": "Low in energy",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q5",
+					"question": {
+						"text": "Difficulty concentrating",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q6",
+					"question": {
+						"text": "Headaches",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q7",
+					"question": {
+						"text": "Stomach aches / other pain",
+						"type": "AMOUNT_SCALE"
+					}
+				},
+				{
+					"id": "s1q8",
+					"question": {
+						"text": "General feelings",
 						"type": "AMOUNT_SCALE"
 					}
 				}

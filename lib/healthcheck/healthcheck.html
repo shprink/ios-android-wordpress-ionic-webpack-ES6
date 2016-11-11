@@ -37,11 +37,11 @@
         <button class="button button-light no-animation" ion-wizard-next>
             Next
         </button>
-        <button class="button button-light no-animation" ion-wizard-start="hcCtrl.start()" condition="hcCtrl.startCondition()">
-            Start App
+        <button class="button button-light no-animation" ion-wizard-start="hcCtrl.submit()" condition="hcCtrl.startCondition()">
+            Finish
         </button>
     </ion-nav-buttons>
-    <ion-slides options="swiperOptions" slider="swiper" ion-wizard>
+    <ion-slides options="swiperOptions" slider="swiper" ion-wizard ng-repeat="section in hcCtrl.questions.sections">
     
         <ion-slide-page 
             ion-wizard-step>
@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col col-center">
                         <div class="card rounded">
-                            <h2 class="positive">{{hcCtrl.questions.sections[0].description}}</h2>
+                            <h2 class="positive">{{section.description}}</h2>
                         </div>
                     </div>
                 </div>
@@ -58,8 +58,8 @@
 
         <ion-slide-page 
             ion-wizard-step
-            next-condition="hcCtrl.responses.hasOwnProperty(element.id)"
-            ng-repeat="element in hcCtrl.questions.sections[0].elements">
+            next-condition="hcCtrl.responses[section.id].hasOwnProperty(element.id)"
+            ng-repeat="element in section.elements">
             <ion-content class="has-header">
                 <div class="row">
                     <div class="col col-center">
@@ -70,7 +70,7 @@
                             <response-options 
                                 ng-if="element.question.type === 'AMOUNT_SCALE'"
                                 name="element.id"
-                                ng-model="hcCtrl.responses[element.id]" />
+                                ng-model="hcCtrl.responses[section.id][element.id]" />
                                 <pre>{{hcCtrl.responses}}</pre>
                             <!-- <div class="item item-text-wrap">
                                 <p>
