@@ -63,6 +63,34 @@
 					}
 				}
 			]
+		},
+		{
+			"id": "GRATITUDES",
+			"name": "Daily Gratitudes",
+			"description": "What 3 things are you grateful for today?",
+			"elements": [
+				{
+					"id": "1",
+					"question": {
+						"text": "First...",
+						"type": "TEXT"
+					}
+				},
+				{
+					"id": "2",
+					"question": {
+						"text": "Second...",
+						"type": "TEXT"
+					}
+				},
+				{
+					"id": "3",
+					"question": {
+						"text": "Third...",
+						"type": "TEXT"
+					}
+				}
+			]
 		}
 	]
 }
